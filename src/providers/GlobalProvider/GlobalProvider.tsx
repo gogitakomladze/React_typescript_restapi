@@ -1,3 +1,4 @@
+import { useComments } from "./useComments";
 import { GlobalContext } from "./GlobalContext";
 
 interface GlobalProviderProps {
@@ -5,5 +6,10 @@ interface GlobalProviderProps {
 };
 
 export function GlobalProvider( {children}: GlobalProviderProps ) {
-    return <GlobalContext.Provider value={{}}>{children}</GlobalContext.Provider>
+    const { comments } = useComments();
+
+    return (
+        <GlobalContext.Provider value={{ comments }}>
+              {children}
+        </GlobalContext.Provider>)
 }

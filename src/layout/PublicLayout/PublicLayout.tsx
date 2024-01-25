@@ -1,6 +1,6 @@
-import { Outlet, Link } from "react-router-dom"
+import { Outlet, Link } from "react-router-dom";
 
-import { SPublicLayout } from "./publicLayout.styled"
+import { SPublicLayout } from "./PublicLayout.styled";
 
 export function PublicLayout() {
     return (

@@ -1,6 +1,9 @@
 import { createContext } from "react";
+import { TComment } from "../../@types/request";
 
-type TGlobalContext = {};
+type TGlobalContext = { comments: TComment[] };
 
 
-export const GlobalContext = createContext<TGlobalContext>({})
+export const GlobalContext = createContext<TGlobalContext>({
+    comments: [],
+});
